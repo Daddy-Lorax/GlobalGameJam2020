@@ -35,6 +35,10 @@ public class PersistentDataManager : ScriptableObject
         {
             SceneManager.LoadScene(levelNames[level]);
         }
+        else if (level == levelNames.Count)
+        {
+            Debug.LogWarning("// todo do cutscene then go back to home and reset");
+        }
         else
         {
             Debug.Log("Level names insufficient. Count: " + level.ToString());
