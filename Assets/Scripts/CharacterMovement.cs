@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private int HASH_POS_X = Animator.StringToHash("PosX");
-    private int HASH_POS_Y = Animator.StringToHash("PosY");
+    private int HASH_POS_X = Animator.StringToHash("VelX");
+    private int HASH_POS_Y = Animator.StringToHash("VelY");
+    private int HASH_IS_MOVING = Animator.StringToHash("IsMoving");
 
     public float playerSpeed = 4f;
 
@@ -23,7 +24,12 @@ public class CharacterMovement : MonoBehaviour
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         GetComponent<Rigidbody2D>().velocity=targetVelocity * playerSpeed;
 
-        animator.SetFloat(HASH_POS_X, targetVelocity.x);
-        animator.SetFloat(HASH_POS_Y, targetVelocity.y);
+        bool isMoving = targetVelocity != Vector2.zero;
+        if (isMoving)
+        {
+            animator.SetFloat(HASH_POS_X, targetVelocity.x);
+            animator.SetFloat(HASH_POS_Y, targetVelocity.y);
+        }
+        animator.SetBool(HASH_IS_MOVING, isMoving);
     }
 }

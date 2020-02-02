@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2f2635f56fd484e8dee3d3b3b0992c, type: 3}
   m_Name: PersistentData
   m_EditorClassIdentifier: 
-  STAMINA_DURATION: 10
-  lastSavedStamina: 9999.18
-  currentStamina: 9985.896
+  STAMINA_DURATION: 10000
+  lastSavedStamina: 10
+  currentStamina: 3.089008
   playerDies: {fileID: 11400000, guid: a0c80e0f8c711044dad7bd5c442b2988, type: 2}
   scrapObjectList: []
   level: 0
