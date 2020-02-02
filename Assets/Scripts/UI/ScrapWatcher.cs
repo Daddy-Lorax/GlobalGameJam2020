@@ -1,25 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class ScrapObject : MonoBehaviour
+public class ScrapWatcher : MonoBehaviour
 {
     public PersistentDataManager dataManager;
 
     private PersistentData persistentData;
+    private TextMeshProUGUI textScrapSize;
 
     private void Start()
     {
         persistentData = dataManager.GetCurrentData();
+        textScrapSize = GetComponent<TextMeshProUGUI>();
     }
 
-    private void Keep()
+    private void Update()
     {
-        persistentData.AddScrap(this);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Keep();
+        textScrapSize.SetText(persistentData.GetScrapSize().ToString());
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6269678354273471250}
   - component: {fileID: 4318605216537325379}
   - component: {fileID: 3179876989871229417}
+  - component: {fileID: 6373497515012885322}
   m_Layer: 0
   m_Name: ScrapObject
   m_TagString: Untagged
@@ -94,3 +95,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: 719098df414ac1d468093d63d79a285e, type: 2}
+--- !u!70 &6373497515012885322
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338257476174135820}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000000010837908, y: -0.009091497}
+  m_Size: {x: 1.0625002, y: 0.5897663}
+  m_Direction: 1

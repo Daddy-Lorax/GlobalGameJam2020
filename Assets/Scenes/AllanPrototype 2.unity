@@ -1111,6 +1111,7 @@ GameObject:
   - component: {fileID: 874524328}
   - component: {fileID: 874524330}
   - component: {fileID: 874524329}
+  - component: {fileID: 874524331}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1255,6 +1256,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874524327}
   m_CullTransparentMesh: 0
+--- !u!114 &874524331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874524327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2586231a4a90cd4b9428aa9b84696b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 11400000, guid: 719098df414ac1d468093d63d79a285e, type: 2}
 --- !u!1 &947806957 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3350515414953330201, guid: 22fa4a9e2a742134398688b4c4e59c47,
@@ -2553,7 +2567,7 @@ PrefabInstance:
     - target: {fileID: 1338257476174135820, guid: b3876c33c39c59d4bb522ffad00b32e7,
         type: 3}
       propertyPath: m_Name
-      value: Scrap
+      value: ScrapObject
       objectReference: {fileID: 0}
     - target: {fileID: 6269678354273471250, guid: b3876c33c39c59d4bb522ffad00b32e7,
         type: 3}

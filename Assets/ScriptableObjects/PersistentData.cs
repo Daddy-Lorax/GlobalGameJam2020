@@ -56,5 +56,14 @@ public class PersistentData : ScriptableObject
         }
     }
 
+    internal void AddScrap(ScrapObject self)
+    {
+        scrapObjectList.Add(self);
+        self.gameObject.SetActive(false);
+    }
 
+    public int GetScrapSize()
+    {
+        return scrapObjectList.Count;
+    }
 }
