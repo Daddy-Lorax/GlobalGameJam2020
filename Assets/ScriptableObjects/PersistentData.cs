@@ -60,6 +60,8 @@ public class PersistentData : ScriptableObject
     internal void AddScrap(ScrapObject self)
     {
         scrapObjectList.Add(self);
+        currentStamina += (float) 0.2 * STAMINA_DURATION;
+        if (currentStamina >= STAMINA_DURATION) currentStamina = STAMINA_DURATION;
         self.gameObject.SetActive(false);
     }
 
