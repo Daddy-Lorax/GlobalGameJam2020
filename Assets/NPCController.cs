@@ -18,6 +18,9 @@ public class NPCController : MonoBehaviour
     private CharacterMovement cm;
     private PersistentData persistentData;
     public Sprite fixedSprite;
+
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +92,7 @@ public class NPCController : MonoBehaviour
             persistentData.currentStamina += Time.deltaTime * eatAmount;
             if (eatTime < 0)
             {
+
                 cm.timeFreeze = false;
                 currentState = 4;
                 gameObject.SetActive(false);

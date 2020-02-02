@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(menuName = "ScriptableObjects/PersistentData")]
 public class PersistentData : ScriptableObject
 {
+    [NonSerializedAttribute]
+    public static int SAVE_NUM = 3;
+
     [Header("Stamina")]
     [Tooltip("Time it takes for the stamina to go down in milliseconds")]
     public float STAMINA_DURATION = 10000;
@@ -59,7 +62,6 @@ public class PersistentData : ScriptableObject
 
     internal void AddScrap(ScrapObject self)
     {
-        scrapObjectList.Add(self);
         currentStamina += (float) 0.2 * STAMINA_DURATION;
         if (currentStamina >= STAMINA_DURATION) currentStamina = STAMINA_DURATION;
         self.gameObject.SetActive(false);

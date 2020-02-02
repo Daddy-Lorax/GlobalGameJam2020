@@ -45,7 +45,7 @@ public class PersistentDataManager : ScriptableObject
         }
         else if (level == levelNames.Count)
         {
-            Debug.LogWarning("// todo do cutscene then go back to home and reset");
+            SceneManager.LoadScene("Ending");
         }
         else
         {
