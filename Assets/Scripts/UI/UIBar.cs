@@ -3,9 +3,16 @@ using UnityEngine.UI;
 
 public class UIBar : MonoBehaviour
 {
-    public PersistentData persistentData;
+    public PersistentDataManager dataManager;
 
     public Image bar;
+
+    private PersistentData persistentData;
+
+    private void Start()
+    {
+        persistentData = dataManager.GetCurrentData();
+    }
 
     public void UpdateBar(float currentValue, float maxValue)
     {

@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     private int HASH_POS_Y = Animator.StringToHash("VelY");
     private int HASH_IS_MOVING = Animator.StringToHash("IsMoving");
 
+    public float SPEED_THRESHOLD = 0.01f;
+
     public float playerSpeed = 4f;
 
     private Animator animator;
@@ -22,9 +24,10 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        GetComponent<Rigidbody2D>().velocity=targetVelocity * playerSpeed;
+        GetComponent<Rigidbody2D>().velocity= targetVelocity * playerSpeed;
 
-        bool isMoving = targetVelocity != Vector2.zero;
+        bool isMoving = Mathf.Abs(targetVelocity.x) > SPEED_THRESHOLD || Mathf.Abs(targetVelocity.y) > SPEED_THRESHOLD;
+        //bool isMoving = targetVelocity != Vector2.zero;
         if (isMoving)
         {
             animator.SetFloat(HASH_POS_X, targetVelocity.x);

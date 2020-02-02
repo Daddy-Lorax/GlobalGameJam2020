@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfdf65df37e1b74383388a66469b0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  persistentData: {fileID: 11400000, guid: a892725d72b0d544f9e96f96cf04fbce, type: 2}
+  persistentManager: {fileID: 11400000, guid: 719098df414ac1d468093d63d79a285e, type: 2}
+  isBeginning: 0

@@ -23,6 +23,17 @@ public class PersistentData : ScriptableObject
 
     [Header("Game data")]
     public int level = 0;
+
+    internal void Backup(PersistentData other)
+    {
+        this.STAMINA_DURATION = other.STAMINA_DURATION;
+        this.lastSavedStamina = other.lastSavedStamina;
+        this.currentStamina = other.currentStamina;
+        this.playerDies = other.playerDies;
+        this.scrapObjectList = other.scrapObjectList;
+        this.level = other.level;
+    }
+
     public List<String> levelNames = new List<String>();
     public bool isPlayerDead = false;
 
@@ -45,17 +56,5 @@ public class PersistentData : ScriptableObject
         }
     }
 
-    public void NextLevel()
-    {
-        lastSavedStamina = currentStamina;
-        if (level < levelNames.Count)
-        {
-            SceneManager.LoadScene(levelNames[level]);
-        }
-        else
-        {
-            Debug.Log("Level names insufficient. Count: " + level.ToString());
-        }
-    }
 
 }

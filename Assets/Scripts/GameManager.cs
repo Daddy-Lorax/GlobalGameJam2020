@@ -6,16 +6,19 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Tooltip("Don't touch")]
-    public PersistentData persistentData;
+    public PersistentDataManager persistentManager;
 
     [Tooltip("Resets all data if true")]
     public bool isBeginning = false;
 
-    private void Start()
+    private PersistentData persistentData;
+
+    private void OnEnable()
     {
         if (isBeginning)
         {
-            persistentData.StartGame();
+            persistentManager.StartGame();
+            persistentData = persistentManager.GetCurrentData();
         }
     }
 
