@@ -164,7 +164,7 @@ Transform:
   - {fileID: 1532802474}
   - {fileID: 2106816722}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469992396
 GameObject:
@@ -687,8 +687,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -4, y: -1, z: 0}
     second:
-      m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileIndex: 29
+      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -1355,7 +1355,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 0fd327e8f05c4d247bffa3b510c5bc79, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 9de8ce8b5ee9fab459c2c91b46227466, type: 2}
-  - m_RefCount: 27
+  - m_RefCount: 26
     m_Data: {fileID: 11400000, guid: bb93b13a664446d47a484772914bc2e8, type: 2}
   - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: c367fcfa0a032fb44a8c1a5319a98f11, type: 2}
@@ -1393,6 +1393,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 6c4351be464f312458a2a1c1607105f5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3e7bd7dfaeb73614fb85994d12fd9658, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: d70c4e40c6e7dd049b8e04e10ba3a466, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 3486783880074043316, guid: 9e2143dce9844ec4fa660395d32b6387,
@@ -1424,7 +1426,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -6354864788495990202, guid: 9e2143dce9844ec4fa660395d32b6387,
       type: 3}
-  - m_RefCount: 27
+  - m_RefCount: 26
     m_Data: {fileID: 5426207309992408879, guid: 9e2143dce9844ec4fa660395d32b6387,
       type: 3}
   - m_RefCount: 21
@@ -1480,6 +1482,9 @@ Tilemap:
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -3476294510987976297, guid: 9e2143dce9844ec4fa660395d32b6387,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -5738380644739755524, guid: 22be2dd101790784d9f1e379f2cd972e,
       type: 3}
   m_TileMatrixArray:
   - m_RefCount: 120
@@ -1840,6 +1845,12 @@ PrefabInstance:
       propertyPath: breakMap
       value: 
       objectReference: {fileID: 2106816724}
+    - target: {fileID: 1737475870028302657, guid: f21a717bbce6be34e8a5096d7b5968c0,
+        type: 3}
+      propertyPath: wallTile
+      value: 
+      objectReference: {fileID: 11400000, guid: f58cc9f750cb27e4fbfd8f9dec688786,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f21a717bbce6be34e8a5096d7b5968c0, type: 3}
 --- !u!114 &1005867160 stripped

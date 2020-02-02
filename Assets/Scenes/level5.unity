@@ -458,7 +458,7 @@ PrefabInstance:
     - target: {fileID: 5915586083236032579, guid: 8e6b882a7760fcd42ae35b286b1fc4cb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5915586083236032579, guid: 8e6b882a7760fcd42ae35b286b1fc4cb,
         type: 3}
@@ -716,16 +716,50 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961781823}
   m_Enabled: 1
-  m_Tiles: {}
+  m_Tiles:
+  - first: {x: -5, y: -1, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: d70c4e40c6e7dd049b8e04e10ba3a466, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 1
+    m_Data: {fileID: -5738380644739755524, guid: 22be2dd101790784d9f1e379f2cd972e,
+      type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 1
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_TileColorArray:
+  - m_RefCount: 1
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
+  m_Origin: {x: -5, y: -1, z: 0}
+  m_Size: {x: 5, y: 1, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -801,7 +835,7 @@ Transform:
   - {fileID: 2110033806}
   - {fileID: 961781824}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1435402408
 PrefabInstance:
@@ -1097,6 +1131,12 @@ PrefabInstance:
       propertyPath: breakMap
       value: 
       objectReference: {fileID: 961781826}
+    - target: {fileID: 1737475870028302657, guid: f21a717bbce6be34e8a5096d7b5968c0,
+        type: 3}
+      propertyPath: wallTile
+      value: 
+      objectReference: {fileID: 11400000, guid: f58cc9f750cb27e4fbfd8f9dec688786,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f21a717bbce6be34e8a5096d7b5968c0, type: 3}
 --- !u!1001 &2015071365
@@ -1692,15 +1732,6 @@ Tilemap:
     second:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: -5, y: -1, z: 0}
-    second:
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -2353,7 +2384,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 879ae904ddc72b044b7d0fd8b3ba076a, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: d936a297f794a7944a78da55e35d1ba1, type: 2}
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {fileID: 11400000, guid: 188b4440ee7311449a02a9ac3102211b, type: 2}
   - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: c367fcfa0a032fb44a8c1a5319a98f11, type: 2}
@@ -2391,7 +2422,7 @@ Tilemap:
   - m_RefCount: 6
     m_Data: {fileID: -4421325981365648892, guid: 9e2143dce9844ec4fa660395d32b6387,
       type: 3}
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {fileID: 7396485813747929060, guid: 9e2143dce9844ec4fa660395d32b6387,
       type: 3}
   - m_RefCount: 60
@@ -2434,7 +2465,7 @@ Tilemap:
     m_Data: {fileID: 2518648207122426532, guid: 9e2143dce9844ec4fa660395d32b6387,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 120
+  - m_RefCount: 119
     m_Data:
       e00: 1
       e01: 0
@@ -2453,7 +2484,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 120
+  - m_RefCount: 119
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
