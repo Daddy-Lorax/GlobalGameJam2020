@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour
     public float SPEED_THRESHOLD = 0.01f;
 
     public float playerSpeed = 4f;
+    public bool timeFreeze;
 
     private Animator animator;
 
@@ -18,11 +19,14 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        timeFreeze = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!timeFreeze)
+        {
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         GetComponent<Rigidbody2D>().velocity= targetVelocity * playerSpeed;
 
@@ -34,5 +38,6 @@ public class CharacterMovement : MonoBehaviour
             animator.SetFloat(HASH_POS_Y, targetVelocity.y);
         }
         animator.SetBool(HASH_IS_MOVING, isMoving);
+        }
     }
 }
