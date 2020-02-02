@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/PersistentData")]
 public class PersistentData : ScriptableObject
@@ -20,9 +21,14 @@ public class PersistentData : ScriptableObject
 
     public List<ScrapObject> scrapObjectList;
 
+    [Header("Game data")]
+    public int level = 0;
+    public List<String> levelNames = new List<String>();
+
     public void StartGame()
     {
         currentStamina = STAMINA_DURATION;
+        level = 0;
     }
 
     public void Update()
@@ -35,5 +41,17 @@ public class PersistentData : ScriptableObject
         }
     }
 
+    public void NextLevel()
+    {
+        lastSavedStamina = currentStamina;
+        if (level < levelNames.Count)
+        {
+            SceneManager.LoadScene(levelNames[level]);
+        }
+        else
+        {
+            Debug.Log("Level names insufficient. Count: " + level.ToString());
+        }
+    }
 
 }
