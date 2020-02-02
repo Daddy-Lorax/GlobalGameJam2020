@@ -24,7 +24,10 @@ public class Portal : MonoBehaviour
     public void ReceivePlayer(Collider2D other)
     {
         justEntered = true;
-        other.transform.position = this.transform.position;
+        other.transform.position = new Vector3(
+            this.transform.position.x,
+            this.transform.position.y,
+            other.transform.position.z);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
