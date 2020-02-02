@@ -24,10 +24,13 @@ public class PersistentData : ScriptableObject
     [Header("Game data")]
     public int level = 0;
     public List<String> levelNames = new List<String>();
+    public bool isPlayerDead = false;
 
     public void StartGame()
     {
+        isPlayerDead = false;
         currentStamina = STAMINA_DURATION;
+        lastSavedStamina = STAMINA_DURATION;
         level = 0;
     }
 
@@ -35,9 +38,10 @@ public class PersistentData : ScriptableObject
     {
         currentStamina -= Time.deltaTime;
 
-        if (currentStamina <= 0)
+        if (currentStamina <= 0 && !isPlayerDead)
         {
             playerDies.Raise();
+            isPlayerDead = true;
         }
     }
 
