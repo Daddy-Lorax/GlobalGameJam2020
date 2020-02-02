@@ -102,6 +102,8 @@ MonoBehaviour:
   eatAmount: 10
   currentState: 0
   dataManager: {fileID: 11400000, guid: 719098df414ac1d468093d63d79a285e, type: 2}
+  fixedSprite: {fileID: 4048632260970879913, guid: 27b53af03d58e184a8d1ee59b5f9060d,
+    type: 3}
 --- !u!61 &6048907759719015078
 BoxCollider2D:
   m_ObjectHideFlags: 0

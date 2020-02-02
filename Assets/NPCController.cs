@@ -13,9 +13,11 @@ public class NPCController : MonoBehaviour
     private bool touch;
     public int currentState;
     public PersistentDataManager dataManager;
-    private Transform child;
+    private Transform button;
+    private Transform help;
     private CharacterMovement cm;
     private PersistentData persistentData;
+    public Sprite fixedSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,17 +25,37 @@ public class NPCController : MonoBehaviour
         touch = false;
         currentState = 0;
         fixTimeFull = fixTime;
-        child = gameObject.transform.GetChild(0);
+
+        button = gameObject.transform.GetChild(0);
+        button.transform.localScale = new Vector3 (0,0,1);
+    
+        help = gameObject.transform.GetChild(1);
+
         cm = GameObject.Find("Player").GetComponent<CharacterMovement>();
         persistentData = dataManager.GetCurrentData();
-        child.transform.localScale = new Vector3 (0,0,1);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(currentState == 0) {
+            if (Mathf.Sin(Time.time * 4) > 0) {
+                help.transform.localScale = new Vector3 (1,1,1);
+            }
+            else
+            {
+                 help.transform.localScale = new Vector3 (0,0,1);
+            }
+            //help.GetComponent<SpriteRenderer>().color = new Color (1,1,1, / 2 + 0.75f);
+        }
+        else
+        {
+            help.transform.localScale = new Vector3 (0,0,1);
+        }
+
         if (touch && currentState == 0) {
-            child.transform.localScale = new Vector3 (2,2,1);
+            button.transform.localScale = new Vector3 (2,2,1);
             if (Input.GetKey(KeyCode.E)) 
             {
                 currentState = 1;
@@ -47,7 +69,7 @@ public class NPCController : MonoBehaviour
         }
         else
         {
-            child.transform.localScale = new Vector3 (0,0,1);
+            button.transform.localScale = new Vector3 (0,0,1);
         }
 
         if (currentState == 1) 
@@ -58,6 +80,7 @@ public class NPCController : MonoBehaviour
             {
                 cm.timeFreeze = false;
                 currentState = 2;
+                gameObject.GetComponent<SpriteRenderer>().sprite = fixedSprite;
             }
         }
         else if (currentState == 3)
