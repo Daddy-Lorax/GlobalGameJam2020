@@ -55,7 +55,7 @@ public class NPCController : MonoBehaviour
         }
 
         if (touch && currentState == 0) {
-            button.transform.localScale = new Vector3 (2,2,1);
+            button.transform.localScale = new Vector3 (1,1,1);
             if (Input.GetKey(KeyCode.E)) 
             {
                 currentState = 1;
