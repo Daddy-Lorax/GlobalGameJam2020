@@ -17,10 +17,17 @@ public class PersistentDataManager : ScriptableObject
     public int level = 0;
     public List<String> levelNames = new List<String>();
 
+    [Header("Audio File")]
+    public GameObject audioPrefab;
+
+    private GameObject audioGameObject;
+    private AudioSource audio;
+
     public void StartGame()
     {
         currentData.StartGame();
         backupData.StartGame();
+        PlayAudio();
     }
 
     public PersistentData GetCurrentData()
@@ -45,4 +52,19 @@ public class PersistentDataManager : ScriptableObject
         }
     }
 
+    private void PlayAudio()
+    {
+        audioGameObject = Instantiate(audioPrefab);
+        audio = audioGameObject.GetComponent<AudioSource>();
+        audio.Play();
+        DontDestroyOnLoad(audioGameObject);
+    }
+
+    private void OnDestroy()
+    {
+        if (audioGameObject != null)
+        {
+            Destroy(audioGameObject);
+        }
+    }
 }

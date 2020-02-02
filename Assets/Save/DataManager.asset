@@ -23,3 +23,5 @@ MonoBehaviour:
   - level5
   - level6
   - level7
+  audioPrefab: {fileID: 6603357934687141829, guid: 77748342a47dcf247bba9b1bf2d89c5c,
+    type: 3}
