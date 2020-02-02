@@ -9,7 +9,7 @@ public class BreakBlock : MonoBehaviour
     public Tilemap breakMap;
  
     private Vector3Int previous;
- 
+
     // do late so that the player has a chance to move in update if necessary
     private void LateUpdate()
     {

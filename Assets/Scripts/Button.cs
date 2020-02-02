@@ -25,7 +25,7 @@ public class Button : MonoBehaviour
         foreach (Door door in correspondingDoors)
         {
             door.ActivateDoor();
-            audioClip.Play();
+            //audioClip.Play();
         }
 
         spriteRenderer.sprite = buttonOn;

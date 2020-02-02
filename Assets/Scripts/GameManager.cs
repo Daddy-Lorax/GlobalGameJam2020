@@ -18,8 +18,12 @@ public class GameManager : MonoBehaviour
         if (isBeginning)
         {
             persistentManager.StartGame();
-            persistentData = persistentManager.GetCurrentData();
         }
+    }
+
+    private void Start()
+    {
+        persistentData = persistentManager.GetCurrentData();
     }
 
     private void Update()

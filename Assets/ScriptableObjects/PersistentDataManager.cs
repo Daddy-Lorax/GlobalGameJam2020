@@ -37,6 +37,7 @@ public class PersistentDataManager : ScriptableObject
 
     public void NextLevel()
     {
+        level++;
         backupData.Backup(currentData);
         if (level < levelNames.Count)
         {
