@@ -43,6 +43,7 @@ public class PersistentData : ScriptableObject
         currentStamina = STAMINA_DURATION;
         lastSavedStamina = STAMINA_DURATION;
         level = 0;
+        scrapObjectList.Clear();
     }
 
     public void Update()
