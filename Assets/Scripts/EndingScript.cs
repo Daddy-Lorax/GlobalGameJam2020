@@ -15,7 +15,7 @@ public class EndingScript : MonoBehaviour
     {
         persistentData = dataManager.GetCurrentData();
         int endingCode = (persistentData.currentStamina >= PersistentData.SAVE_NUM) ?
-            1 : 2;
+            2 : 1;
         Animator animator = GetComponent<Animator>();
         animator.SetInteger(HASH_ENDING_CONTROLLER, endingCode);
     }

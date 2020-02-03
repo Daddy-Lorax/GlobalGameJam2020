@@ -58,6 +58,7 @@ public class PersistentDataManager : ScriptableObject
         audioGameObject = Instantiate(audioPrefab);
         audio = audioGameObject.GetComponent<AudioSource>();
         audio.Play();
+        audio.volume = 0.2f;
         DontDestroyOnLoad(audioGameObject);
     }
 

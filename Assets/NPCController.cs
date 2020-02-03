@@ -18,10 +18,13 @@ public class NPCController : MonoBehaviour
     private CharacterMovement cm;
     private PersistentData persistentData;
     public Sprite fixedSprite;
-
     public Animator animator;
 
-    // Start is called before the first frame update
+    private GameObject player;
+
+    public float helpDistance = 2;
+    public float promptDistance = 1;
+    public Vector2 helpOffset;
     void Start()
     {
         bc = GetComponent<BoxCollider2D>();
@@ -33,8 +36,10 @@ public class NPCController : MonoBehaviour
         button.transform.localScale = new Vector3 (0,0,1);
     
         help = gameObject.transform.GetChild(1);
+        helpOffset = help.transform.localPosition;
 
         cm = GameObject.Find("Player").GetComponent<CharacterMovement>();
+        player = GameObject.Find("Player");
         persistentData = dataManager.GetCurrentData();
         
     }
@@ -42,20 +47,10 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentState == 0) {
-            if (Mathf.Sin(Time.time * 4) > 0) {
-                help.transform.localScale = new Vector3 (1,1,1);
-            }
-            else
-            {
-                 help.transform.localScale = new Vector3 (0,0,1);
-            }
-            //help.GetComponent<SpriteRenderer>().color = new Color (1,1,1, / 2 + 0.75f);
-        }
-        else
-        {
-            help.transform.localScale = new Vector3 (0,0,1);
-        }
+        bool helpActive = (((Vector2)player.transform.position - (Vector2)transform.position).magnitude > helpDistance);
+        //Debug.Log((player.transform.position - transform.position));
+        help.gameObject.SetActive(helpActive);
+        help.transform.localPosition = helpOffset + Vector2.up*Mathf.Sin(Time.time)*0.2f;
 
         if (touch && currentState == 0) {
             button.transform.localScale = new Vector3 (1,1,1);
