@@ -28,6 +28,6 @@ public class UIBar : MonoBehaviour
 
     private void Update()
     {
-        UpdateBar(persistentData.currentStamina, persistentData.STAMINA_DURATION);
+        UpdateBar(persistentData.currentStamina, persistentData.PLAYER_MAXHEALTH);
     }
 }

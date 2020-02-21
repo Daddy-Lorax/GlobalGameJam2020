@@ -75,7 +75,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 960, y: 512}
+  m_ReferenceResolution: {x: 480, y: 270}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -106,6 +106,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5915586083236032579}
     m_Modifications:
+    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 924375237856204456, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
         type: 3}
       propertyPath: m_Name
@@ -216,25 +236,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
+    - target: {fileID: 924375239100303524, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 924375237675929727, guid: 3b64772ae47756f45b4e2e0b7e6fd115,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
+      propertyPath: m_AnchoredPosition.y
+      value: 5.330017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b64772ae47756f45b4e2e0b7e6fd115, type: 3}

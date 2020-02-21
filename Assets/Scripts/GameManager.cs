@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         persistentData = persistentManager.GetCurrentData();
     }
 
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("Player died.");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

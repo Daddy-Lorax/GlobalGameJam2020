@@ -5,23 +5,34 @@ using UnityEngine;
 public class EndingScript : MonoBehaviour
 {
     private int HASH_ENDING_CONTROLLER = Animator.StringToHash("EndingCode");
+    Animator animator;
 
     public PersistentDataManager dataManager;
     public float duration;
 
     private PersistentData persistentData;
 
+    public string[] endingStateNames = new string[] { "GoodEnd", "BadEnd" };
+
+    public int endingCode = 0;
+
     private void Start()
     {
         persistentData = dataManager.GetCurrentData();
-        int endingCode = (persistentData.currentStamina >= PersistentData.SAVE_NUM) ?
-            2 : 1;
-        Animator animator = GetComponent<Animator>();
-        animator.SetInteger(HASH_ENDING_CONTROLLER, endingCode);
+        //endingCode = (persistentData.currentStamina >= PersistentData.SAVE_NUM) ? 1 : 0;
+        animator = GetComponent<Animator>();
+
+        StartCutscene();
     }
 
     private void Update()
     {
-        
+
+    }
+
+    public void StartCutscene()
+    {
+
+        animator.Play(endingStateNames[endingCode]);
     }
 }

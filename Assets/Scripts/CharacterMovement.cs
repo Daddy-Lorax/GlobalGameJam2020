@@ -27,17 +27,17 @@ public class CharacterMovement : MonoBehaviour
     {
         if (!timeFreeze)
         {
-        Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        GetComponent<Rigidbody2D>().velocity= targetVelocity * playerSpeed;
+            Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            GetComponent<Rigidbody2D>().velocity = targetVelocity * playerSpeed;
 
-        bool isMoving = Mathf.Abs(targetVelocity.x) > SPEED_THRESHOLD || Mathf.Abs(targetVelocity.y) > SPEED_THRESHOLD;
-        //bool isMoving = targetVelocity != Vector2.zero;
-        if (isMoving)
-        {
-            animator.SetFloat(HASH_POS_X, targetVelocity.x);
-            animator.SetFloat(HASH_POS_Y, targetVelocity.y);
-        }
-        animator.SetBool(HASH_IS_MOVING, isMoving);
+            bool isMoving = Mathf.Abs(targetVelocity.x) > SPEED_THRESHOLD || Mathf.Abs(targetVelocity.y) > SPEED_THRESHOLD;
+            //bool isMoving = targetVelocity != Vector2.zero;
+            if (isMoving)
+            {
+                animator.SetFloat(HASH_POS_X, targetVelocity.x);
+                animator.SetFloat(HASH_POS_Y, targetVelocity.y);
+            }
+            animator.SetBool(HASH_IS_MOVING, isMoving);
         }
     }
 }

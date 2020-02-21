@@ -18,6 +18,6 @@ public class ScrapWatcher : MonoBehaviour
 
     private void Update()
     {
-        textScrapSize.SetText(persistentData.GetScrapSize().ToString());
+        textScrapSize.SetText(persistentData.numScrapGet.ToString());
     }
 }
