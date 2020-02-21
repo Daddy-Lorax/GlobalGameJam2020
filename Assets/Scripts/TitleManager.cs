@@ -9,7 +9,7 @@ public class TitleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene("level1");
+            SceneManager.LoadScene("GameRoom");
         }
     }
 }

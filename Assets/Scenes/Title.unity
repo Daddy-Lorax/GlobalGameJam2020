@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -686,8 +687,9 @@ AudioSource:
   m_GameObject: {fileID: 1911522277}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 98016e99b2d949740b775cb8669f46e9, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a04b779861d9bd84598846b18465160d,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 538c3fc1579eeb147aa0a4494ea526ef, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
