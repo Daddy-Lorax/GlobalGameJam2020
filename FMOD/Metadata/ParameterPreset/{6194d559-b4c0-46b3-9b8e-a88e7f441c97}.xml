@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{6194d559-b4c0-46b3-9b8e-a88e7f441c97}">
+		<property name="name">
+			<value>volTense</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0818d110-2473-4483-82ea-3f33546dc227}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f7ebbbdf-113d-4add-bc96-3f95878a173f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f7ebbbdf-113d-4add-bc96-3f95878a173f}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.50000005960464478</value>
+		</property>
+		<relationship name="automators">
+			<destination>{8eb65d7e-b025-4d1b-abe2-ba6ee8d22a0d}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{8eb65d7e-b025-4d1b-abe2-ba6ee8d22a0d}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{d130f6d1-7468-417b-8fb4-92c98e3f6e41}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{d130f6d1-7468-417b-8fb4-92c98e3f6e41}">
+		<relationship name="parameter">
+			<destination>{4fa70235-336b-4432-8bd8-730a3279eb0a}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{9af1881c-b8d6-480d-9fff-2150d3b66aff}</destination>
+			<destination>{fb54f477-22b1-4825-aeca-3b35a39e8024}</destination>
+			<destination>{51dade9b-c314-4874-bb69-f338399b8d4d}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{9af1881c-b8d6-480d-9fff-2150d3b66aff}">
+		<property name="position">
+			<value>2</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{fb54f477-22b1-4825-aeca-3b35a39e8024}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{51dade9b-c314-4874-bb69-f338399b8d4d}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

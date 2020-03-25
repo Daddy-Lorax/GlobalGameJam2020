@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{5d807f87-0de3-48c7-a3d1-aae75d97ca23}">
+		<property name="assetPath">
+			<value>Music/title_depreciation.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>33.75</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0049c150-4888-48dc-ab38-e87e8e0eab41}</destination>
+		</relationship>
+	</object>
+</objects>
